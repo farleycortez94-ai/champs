@@ -1,1 +1,348 @@
-<a class="btn" href="/client-intake.html">Start Your Tax Intake Form</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tax Client Intake | Champs Professional Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .intake-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #dbeafe 100%);
+      padding: 4rem 0 2.5rem;
+    }
+    .intake-hero-card {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #dbeafe;
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    }
+    .intake-hero h1 {
+      max-width: 900px;
+    }
+    .notice-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 5px solid #1d4ed8;
+      border-radius: 1.25rem;
+      padding: 1rem 1.25rem;
+      color: #1e293b;
+      margin: 1.5rem 0;
+    }
+    .intake-form {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+      margin: 2rem 0 5rem;
+    }
+    fieldset {
+      border: 1px solid #e2e8f0;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      margin: 0 0 1.5rem;
+      background: #ffffff;
+    }
+    legend {
+      font-weight: 800;
+      color: #0f172a;
+      padding: 0 0.5rem;
+      font-size: 1.1rem;
+    }
+    .section-note {
+      color: #475569;
+      margin-top: 0;
+      font-size: 0.95rem;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .full { grid-column: 1 / -1; }
+    label {
+      display: block;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.85rem;
+      padding: 0.85rem;
+      font: inherit;
+      color: #0f172a;
+      background: white;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: 3px solid rgba(29, 78, 216, 0.15);
+      border-color: #1d4ed8;
+    }
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.7rem 1rem;
+    }
+    .check-item {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      color: #334155;
+      font-weight: 500;
+    }
+    .check-item input { width: auto; margin-top: 0.25rem; }
+    .required { color: #dc2626; }
+    .signature-box {
+      border: 1px dashed #94a3b8;
+      border-radius: 1.25rem;
+      padding: 1rem;
+      background: #f8fafc;
+    }
+    .submit-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.5rem;
+    }
+    .fine-print {
+      color: #64748b;
+      font-size: 0.9rem;
+      max-width: 720px;
+    }
+    @media (max-width: 700px) {
+      .form-grid, .check-grid { grid-template-columns: 1fr; }
+      .intake-form { padding: 1rem; border-radius: 1.25rem; }
+      fieldset { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Champs Professional Services</div>
+      <nav>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="client-intake.html">Client Intake</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intake-hero">
+      <div class="container">
+        <div class="intake-hero-card">
+          <span class="eyebrow">Professional • Reliable • Trusted</span>
+          <h1>Tax Preparation Client Intake Form</h1>
+          <p>
+            Complete this form so Champs Professional Services can review your tax preparation information,
+            organize your documents, and help prepare your return accurately.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#intake-form">Start Intake Form</a>
+            <a class="btn btn-secondary" href="index.html#contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="notice-box">
+          <strong>Before you begin:</strong> Please have your photo ID, Social Security cards or ITIN letters,
+          income forms, dependent information, banking information, prior-year return, and any IRS, state,
+          or city tax letters available. Missing information may delay preparation and filing.
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <form id="intake-form" class="intake-form" action="https://formspree.io/f/YOUR_FORM_ID" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>1. Primary Taxpayer Information</legend>
+          <p class="section-note">Enter information exactly as it appears on your Social Security card and official tax documents.</p>
+          <div class="form-grid">
+            <div><label for="firstName">First Name <span class="required">*</span></label><input id="firstName" name="firstName" type="text" required></div>
+            <div><label for="lastName">Last Name <span class="required">*</span></label><input id="lastName" name="lastName" type="text" required></div>
+            <div><label for="ssn">Social Security Number / ITIN <span class="required">*</span></label><input id="ssn" name="ssn" type="text" placeholder="XXX-XX-XXXX" required></div>
+            <div><label for="dob">Date of Birth <span class="required">*</span></label><input id="dob" name="dob" type="date" required></div>
+            <div><label for="phone">Phone Number <span class="required">*</span></label><input id="phone" name="phone" type="tel" required></div>
+            <div><label for="email">Email Address <span class="required">*</span></label><input id="email" name="email" type="email" required></div>
+            <div class="full"><label for="address">Current Mailing Address <span class="required">*</span></label><input id="address" name="address" type="text" required></div>
+            <div><label for="city">City <span class="required">*</span></label><input id="city" name="city" type="text" required></div>
+            <div><label for="state">State <span class="required">*</span></label><input id="state" name="state" type="text" required></div>
+            <div><label for="zip">ZIP Code <span class="required">*</span></label><input id="zip" name="zip" type="text" required></div>
+            <div><label for="occupation">Occupation</label><input id="occupation" name="occupation" type="text"></div>
+            <div><label for="preferredContact">Preferred Contact Method</label><select id="preferredContact" name="preferredContact"><option value="">Select one</option><option>Phone</option><option>Email</option><option>Text Message</option></select></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Filing Status and Prior-Year Information</legend>
+          <div class="form-grid">
+            <div><label for="filingStatus">Expected Filing Status <span class="required">*</span></label><select id="filingStatus" name="filingStatus" required><option value="">Select one</option><option>Single</option><option>Married Filing Jointly</option><option>Married Filing Separately</option><option>Head of Household</option><option>Qualifying Surviving Spouse</option><option>Unsure</option></select></div>
+            <div><label for="priorReturn">Did you file a return last year?</label><select id="priorReturn" name="priorReturn"><option value="">Select one</option><option>Yes</option><option>No</option><option>Unsure</option></select></div>
+            <div><label for="irsPin">Did the IRS issue you an Identity Protection PIN?</label><select id="irsPin" name="irsPin"><option value="">Select one</option><option>Yes</option><option>No</option><option>Unsure</option></select></div>
+            <div><label for="taxYear">Tax Year Being Prepared</label><input id="taxYear" name="taxYear" type="text" placeholder="Example: 2025"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Spouse Information</legend>
+          <p class="section-note">Complete this section if married or filing jointly/separately.</p>
+          <div class="form-grid">
+            <div><label for="spouseFirst">Spouse First Name</label><input id="spouseFirst" name="spouseFirst" type="text"></div>
+            <div><label for="spouseLast">Spouse Last Name</label><input id="spouseLast" name="spouseLast" type="text"></div>
+            <div><label for="spouseSsn">Spouse SSN / ITIN</label><input id="spouseSsn" name="spouseSsn" type="text" placeholder="XXX-XX-XXXX"></div>
+            <div><label for="spouseDob">Spouse Date of Birth</label><input id="spouseDob" name="spouseDob" type="date"></div>
+            <div><label for="spouseOccupation">Spouse Occupation</label><input id="spouseOccupation" name="spouseOccupation" type="text"></div>
+            <div><label for="spousePhone">Spouse Phone Number</label><input id="spousePhone" name="spousePhone" type="tel"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. Dependents</legend>
+          <p class="section-note">List every dependent you want reviewed. Include full legal name, DOB, SSN/ITIN, relationship, months lived with you, student status, disability status if applicable, and income.</p>
+          <textarea name="dependents" placeholder="Example: Full Name | DOB | SSN/ITIN | Relationship | Months in Home | Student? | Disabled? | Income? | Childcare?"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. Income Documents</legend>
+          <p class="section-note">Select all income types that apply and provide the matching documents.</p>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="W-2"> W-2 wages</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-NEC"> 1099-NEC contractor/self-employment income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-MISC"> 1099-MISC income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-K"> 1099-K payment app/platform income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-INT"> 1099-INT interest income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-DIV"> 1099-DIV dividends</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-B"> 1099-B stocks, crypto, or investment sales</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-R"> 1099-R retirement income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="SSA-1099"> SSA-1099 Social Security</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="1099-G"> 1099-G unemployment or state refund</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="W-2G"> W-2G gambling winnings</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="Rental"> Rental property income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="Payment Apps"> Cash App, PayPal, Venmo, or payment app income</label>
+            <label class="check-item"><input type="checkbox" name="incomeDocs" value="Other"> Other income</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>6. Self-Employment / Business Information</legend>
+          <p class="section-note">Complete this section if you had business income, contractor income, gig work, cash income, or payment-app income.</p>
+          <div class="form-grid">
+            <div><label for="businessName">Business Name</label><input id="businessName" name="businessName" type="text"></div>
+            <div><label for="businessType">Type of Business / Service</label><input id="businessType" name="businessType" type="text"></div>
+            <div><label for="businessIncome">Total Gross Business Income</label><input id="businessIncome" name="businessIncome" type="number" step="0.01"></div>
+            <div><label for="businessMiles">Business Miles Driven</label><input id="businessMiles" name="businessMiles" type="number"></div>
+            <div><label for="businessStartDate">Business Start Date</label><input id="businessStartDate" name="businessStartDate" type="date"></div>
+            <div><label for="homeOffice">Did you use a home office?</label><select id="homeOffice" name="homeOffice"><option value="">Select one</option><option>Yes</option><option>No</option><option>Unsure</option></select></div>
+            <div class="full"><label for="businessExpenses">Business Expenses</label><textarea id="businessExpenses" name="businessExpenses" placeholder="List supplies, advertising, software, phone, internet, vehicle, mileage, equipment, insurance, fees, contract labor, home office, professional services, and any other business expenses."></textarea></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>7. Deductions and Credits</legend>
+          <p class="section-note">Select all that apply and provide supporting documentation.</p>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Children or Dependents"> Children or other dependents</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Childcare"> Childcare expenses</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Education"> College tuition / Form 1098-T</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Student Loan Interest"> Student loan interest / Form 1098-E</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Mortgage Interest"> Mortgage interest / Form 1098</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Property Taxes"> Property taxes</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Charitable Donations"> Charitable donations</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Medical Expenses"> Medical and dental expenses</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="Energy Credit"> Energy-efficient home improvements</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="EV Credit"> Electric vehicle credit</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="HSA"> HSA / Forms 1099-SA or 5498-SA</label>
+            <label class="check-item"><input type="checkbox" name="deductionsCredits" value="IRA"> IRA contributions</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>8. Health Insurance Information</legend>
+          <div class="form-grid">
+            <div><label for="healthCoverage">Did everyone on the return have health insurance?</label><select id="healthCoverage" name="healthCoverage"><option value="">Select one</option><option>Yes, all year</option><option>Yes, part of the year</option><option>No</option><option>Unsure</option></select></div>
+            <div><label for="marketplace">Did you receive Marketplace insurance?</label><select id="marketplace" name="marketplace"><option value="">Select one</option><option>Yes - I have Form 1095-A</option><option>No</option><option>Unsure</option></select></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>9. Banking Information for Direct Deposit</legend>
+          <p class="section-note">Only complete this section if you want direct deposit or electronic payment setup.</p>
+          <div class="form-grid">
+            <div><label for="bankName">Bank Name</label><input id="bankName" name="bankName" type="text"></div>
+            <div><label for="accountType">Account Type</label><select id="accountType" name="accountType"><option value="">Select one</option><option>Checking</option><option>Savings</option></select></div>
+            <div><label for="routingNumber">Routing Number</label><input id="routingNumber" name="routingNumber" type="text"></div>
+            <div><label for="accountNumber">Account Number</label><input id="accountNumber" name="accountNumber" type="text"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>10. State, Local, and Prior-Year Tax Information</legend>
+          <div class="form-grid">
+            <div><label for="residentState">State of Residence</label><input id="residentState" name="residentState" type="text"></div>
+            <div><label for="workedStates">States Worked In</label><input id="workedStates" name="workedStates" type="text"></div>
+            <div><label for="localTax">City/Local Tax Forms or Locality</label><input id="localTax" name="localTax" type="text"></div>
+            <div><label for="estimatedPayments">Estimated Tax Payments Made?</label><select id="estimatedPayments" name="estimatedPayments"><option value="">Select one</option><option>Yes</option><option>No</option><option>Unsure</option></select></div>
+            <div class="full"><label for="irsLetters">Did you receive any IRS, state, or city tax letters?</label><textarea id="irsLetters" name="irsLetters" placeholder="Briefly explain and upload copies of any notices or letters."></textarea></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>11. Document Upload Checklist</legend>
+          <p class="section-note">Upload clear photos or PDFs of all applicable documents. The upload field will only work after this page is connected to a secure form processor.</p>
+          <div class="check-grid">
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Photo ID"> Valid photo ID</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Social Security Cards"> Social Security cards / ITIN letters</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Prior Year Return"> Prior-year tax return</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Income Forms"> W-2s / 1099s / income statements</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Dependent Documents"> Dependent documents</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Education Forms"> 1098-T / 1098-E</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Childcare Statement"> Childcare provider statement</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Marketplace Form"> 1095-A Marketplace form</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="Business Expenses"> Business income and expense records</label>
+            <label class="check-item"><input type="checkbox" name="uploadChecklist" value="IRS Notices"> IRS, state, or city letters</label>
+          </div>
+          <div class="full" style="margin-top: 1rem;"><label for="documents">Upload Documents</label><input id="documents" name="documents" type="file" multiple></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>12. Additional Information</legend>
+          <label for="additionalNotes">Anything else we should know?</label>
+          <textarea id="additionalNotes" name="additionalNotes" placeholder="Include life changes, address changes, new child, marriage, divorce, home purchase or sale, business start-up, crypto activity, rental property, amended return needs, or special tax situations."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>13. Acknowledgment and Consent</legend>
+          <div class="signature-box">
+            <label class="check-item"><input type="checkbox" name="accuracyConsent" required> I confirm that the information provided is true, complete, and accurate to the best of my knowledge. <span class="required">*</span></label>
+            <label class="check-item"><input type="checkbox" name="documentConsent" required> I understand that missing or inaccurate documents may delay preparation or filing. <span class="required">*</span></label>
+            <label class="check-item"><input type="checkbox" name="contactConsent" required> I authorize Champs Professional Services to contact me regarding tax preparation services. <span class="required">*</span></label>
+            <div class="form-grid" style="margin-top: 1rem;">
+              <div><label for="signature">Client Electronic Signature <span class="required">*</span></label><input id="signature" name="signature" type="text" placeholder="Type full legal name" required></div>
+              <div><label for="signatureDate">Date <span class="required">*</span></label><input id="signatureDate" name="signatureDate" type="date" required></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="submit-row">
+          <button class="btn btn-primary" type="submit">Submit Intake Form</button>
+          <p class="fine-print">Security note: Before using this form with real clients, replace the placeholder form action with a secure encrypted form provider or client portal. GitHub and Vercel should host the website only, not store sensitive tax records.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
